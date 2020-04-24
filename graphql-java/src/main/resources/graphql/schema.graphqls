@@ -1,0 +1,16 @@
+type Device{
+    id:ID
+    manufacturer:String
+    name:String
+    parts:[String]
+}
+
+type Query{
+    devices:[Device]
+    device(id:ID):Device
+}
+
+type Subscription{
+    devices(count:Int):Device
+}
+
